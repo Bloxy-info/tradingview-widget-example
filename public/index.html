@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">		
+		<script src="./charting_library/charting_library.min.js"></script>
+		<script src="./datafeeds/udf/dist/bundle.js"></script>
+		<title>Bloxy.info - Trading View Integraton</title>
+	</head>
+	<body>
+		<noscript>
+			You need to enable JavaScript to run this app.
+		</noscript>
+		<div id="tv_chart_container"></div>
+
+		<script>
+			var _datafeed = new Datafeeds.UDFCompatibleDatafeed("https://demo_feed.tradingview.com", 10000);
+            window.tvWidget = new TradingView.widget({
+                symbol: 'AAPL',
+                fullscreen:true,
+                interval: '15',
+                container_id: "tv_chart_container",
+                datafeed: _datafeed,
+                library_path: "./charting_library/",
+                // locale: getParameterByName('lang') || "en",
+				// disabled_features: ["use_localstorage_for_settings", "header_symbol_search", "symbol_search_hot_key"],
+				debug: true,
+                /*overrides: {
+                    "paneProperties.background": "#222222",
+                    "paneProperties.vertGridProperties.color": "#454545",
+                    "paneProperties.horzGridProperties.color": "#454545",
+                    "symbolWatermarkProperties.transparency": 90,
+                    "scalesProperties.textColor": "#AAA"
+                }*/
+            });
+
+		</script>
+	</body>
+</html>

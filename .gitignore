@@ -1,3 +1,4 @@
 public/charting_library/
 public/datafeeds/
 .idea/
+node_modules/
