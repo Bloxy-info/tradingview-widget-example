@@ -13,9 +13,13 @@
 		<div id="tv_chart_container"></div>
 
 		<script>
-			var _datafeed = new Datafeeds.UDFCompatibleDatafeed("https://demo_feed.tradingview.com", 10000);
+
+			// get this URL at https://bloxy.info
+			var _feed_url = 'http://localhost:3000/api/dex/tradingview?protocol=sd&key=<YOUR API KEY>&format=table&_query=tv'
+
+			var _datafeed = new Datafeeds.UDFCompatibleDatafeed(_feed_url, 10000);
             window.tvWidget = new TradingView.widget({
-                symbol: 'AAPL',
+                //symbol: 'AAPL',
                 fullscreen:true,
                 interval: '15',
                 container_id: "tv_chart_container",

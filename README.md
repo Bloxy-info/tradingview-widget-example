@@ -20,4 +20,4 @@ cp -r charting_library/charting_library ./tradingview-widget-example/public/
 ```
 Once you have added the charting library, run `npm install` from inside the step you want to run.
 
-Then run `node app.js` to start the development server, and visit `localhost:3000` in your browser.
+Then run `node app.js` to start the development server, and visit `localhost:3001` in your browser.
